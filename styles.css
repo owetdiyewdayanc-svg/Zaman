@@ -1,0 +1,169 @@
+.kart {
+    display: flex;
+    justify-content: space-between; /* "Zaman" çepde, menýu sagda bolar */
+    align-items: center;
+    padding: 15px 5%; /* Gapdallardan biraz boşluk goýar */
+    background-color: #0F172A; /* Saňa maslahat beren reňkim */
+  height: 50px;
+}
+.hyzmat{
+  color: white;
+  text-decoration: none;
+}
+.tazelikler{
+   color: white;
+  text-decoration: none;
+}
+.biz{
+   color: white;
+  text-decoration: none;
+}
+.ustunlik{
+  margin-left: 70px;
+  color: white;
+  text-decoration: none;
+}
+.zaman{
+  color: white;
+}
+.kart a {
+    color: white;
+    text-decoration: none; /* Aşagyndaky çyzygy aýyrýar */
+    margin-left: 20px; /* Bölümleriň arasyny açýar */
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: 0.3s; /* Reňk üýtgände ýumşak bolar */
+}
+
+.kart a:hover {
+    color: #38bdf8; /* Syçanjygy üstüne getireniňde açyk gök bolar */
+}
+
+.zaman {
+    font-size: 24px;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 2px; /* Harplaryň arasyny açyp, brend ýaly görkezýär */
+}
+.hero {
+    display: flex;
+    flex-direction: column; /* Ýazgylary biri-biriniň aşagyndan goýar */
+    align-items: center;    /* Gorizontal merkezleşdirer */
+    justify-content: center; /* Wertikal merkezleşdirer */
+    text-align: center;      /* Ýazgylaryň özüni ortalar */
+    padding: 100px 20px;     /* Ýokardan we aşakdan boşluk goýar */
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); /* Ýumşak fon */
+}
+
+.hero h1 {
+    font-size: 48px;         /* Uly we täsirli ýazgy */
+    color: #0F172A;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #64748b;
+    max-width: 600px;        /* Ýazgy gaty giňeýmez ýaly */
+    line-height: 1.6;        /* Setirleriň arasyny açar */
+}
+.hero button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #38bdf8; /* Gök reňk */
+    border: none;
+    border-radius: 8px;      /* Gyralaryny ýomşadar */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: #0ea5e9; /* Üstüne getireniňde reňki üýtgeýär */
+    transform: translateY(-3px); /* Biraz ýokary galar */
+}
+body{
+  overflow-x: hidden; /* Gapdala süýşmegi gadagan edýär */
+    margin: 0;
+    padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+.ayratynlyk {
+    display: flex;
+    flex-wrap: wrap;       /* Sygmadygy aşaky setire geçirer */
+    justify-content: center;
+    gap: 20px;             /* Bloklaryň arasyna boşluk goýar */
+    padding: 40px 5%;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    /* Telefonda bloklar ekranyň 90% göwrümini alar */
+    width: 90%; 
+    max-width: 350px;      /* Kompýuterde gaty uly bolmazlygy üçin */
+    text-align: center;
+    box-sizing: border-box; /* Padding razmere täsir etmez ýaly */
+}
+.ayag {
+    background-color: #0F172A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+.zaman {
+    font-size: 26px;
+    font-weight: bold;
+    color: #38bdf8; /* Düwmedäki gök reňk bilen birmeňzeş etdik */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* 1. Animasiýanyň özi (aşakdan ýokaryk we durylyk) */
+@keyframes yuzupGel {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Ähli bölümlere animasiýanyň esasy düzgünini berýäris */
+.kart, .hero h1, .hero p, .hero button, .box {
+    opacity: 0; /* Başynda görünmesinler */
+    animation: yuzupGel 0.8s ease-out forwards;
+}
+
+/* 3. YZYGIDERLIK (Gezekli-gezegine gelmekleri) */
+
+/* Ilki Menýu (Header) */
+.kart { 
+    animation-delay: 0.1s; 
+}
+
+/* Soňra Baş söz (H1) */
+.hero h1 { 
+    animation-delay: 0.4s; 
+}
+
+/* Soňra düşündiriş ýazgysy (P) */
+.hero p { 
+    animation-delay: 0.7s; 
+}
+
+/* Soňra Düwme (Button) */
+.hero button { 
+    animation-delay: 1s; 
+}
+
+/* Iň soňunda bolsa aşaky Kartoçkalar (Box) */
+.box {
+    animation-delay: 1.3s; 
+}
