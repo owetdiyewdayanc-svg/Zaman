@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Zaman App: Service Worker gurnaldy!'))
+        .catch(err => console.log('Zaman App: Ýalňyşlyk ýüze çykdy!', err));
+    });
+  }
+</script>
+
+</head>
+<body>
+    <div class="kart">
+    <b class="zaman">Zaman</b>
+    <a href="" class="ustunlik">Üstunlik</a>
+    <a href="" class="tazelikler">Täzelikler</a>
+    <a href="" class="hyzmat">Hyzmat</a>
+    <a href="" class="biz">Biz</a>
+    </div>
+    <div class="hero">
+    <h1>Täze Döwrüň Başlangyjy</h1>
+    <p>Zaman bilen sanly dünýäde öz ýeriňizi tapyň.</p>
+    <button>Başlamak</button>
+    <div class="ayratynlyk">
+    <div class="box">
+        <h3>Tiz</h3>
+        <p>Saýtymyz iň ýokary tizlikde işleýär.</p>
+    </div>
+    <div class="box">
+        <h3>Ygtybarly</h3>
+        <p>Maglumatlaryňyz doly gorag astynda.</p>
+    </div>
+    <div class="box">
+        <h3>Döwrebap</h3>
+        <p>Iň täze tehnologiýalar bilen döredilen.</p>
+    </div>
+</div>
+</div>
+<footer class="ayag">
+    <p>&copy; 2026 Zaman. Ähli hukuklar goragly.</p>
+</footer>
+<script>
+    document.querySelector('.hero button').addEventListener('click', () => {
+        document.querySelector('.ayratynlyk').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
